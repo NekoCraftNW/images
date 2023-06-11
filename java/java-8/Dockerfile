@@ -2,4 +2,4 @@ FROM azul/zulu-openjdk:8
 
 WORKDIR /home/midnight
 
-CMD java -jar CPDB.jar ; java -jar -Xmx$RAM"M" -Xms$RAM"M" $SERVER_ID".jar" --port=$PORT
+CMD java -jar CPDB.jar ; java -Xmx$RAM"M" -Xms$RAM"M" -Dds-template=$TEMPLATE -Dnode-id=$NODE_ID -Dnode-ip=$NODE_IP -jar $SERVER_ID".jar" --port=$PORT
