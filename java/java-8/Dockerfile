@@ -12,7 +12,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     tzdata \
     nano \
     unzip \
-    trickle \
     && apt-get clean
 
 RUN mkdir -p /home/midnight
